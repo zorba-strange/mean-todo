@@ -3,8 +3,8 @@
 (function(){
   angular
     .module('todo', [
-        'ui.router',
         'author',
+        'ui.router'
     ])
     .config([
         '$stateProvider',

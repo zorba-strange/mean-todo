@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var authorsController = require('./controllers/authorsController');
+var cors = require('cors');
 var app = express();
 
 // connect to database
@@ -14,6 +15,7 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+app.use(cors());
 
 app.listen(8080, function(err){
   if(err){
