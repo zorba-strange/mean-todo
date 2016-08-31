@@ -8,7 +8,11 @@ var cors = require('cors');
 var app = express();
 
 // connect to database
-mongoose.connect('mongodb://localhost/todo');
+if(process.env.NODE_ENV == "production"){
+    mongoose.connect("mongodb://heroku_xz4nnfst:gljchnud613nc4036tgg6ht7mp@ds019976.mlab.com:19976/heroku_xz4nnfst")
+}else{
+      mongoose.connect("mongodb://localhost/todo");
+}
 
 // set and use
 app.set('view engine', 'hbs');
@@ -17,7 +21,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(cors());
 
-app.listen(8080, function(err){
+app.listen(process.env.PORT || 8080, function(err){
   if(err){
     console.log(err);
   }else{
