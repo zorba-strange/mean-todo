@@ -30,4 +30,5 @@ app.get('/authors', authorsController.index);
 app.post('/authors', authorsController.new);
 app.get('/authors/:id', authorsController.show);
 app.put('/authors/:id', authorsController.update);
+app.delete('/authors/:id', authorsController.delete);
 

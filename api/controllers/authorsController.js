@@ -32,6 +32,13 @@ var authorsController = {
         }
       })
     })
+  },
+  delete: function(req, res){
+    AuthorModel.remove({_id: req.params.id}, function(err){
+      if(err){
+        console.log(err);
+      }
+    })
   }
 }
 
