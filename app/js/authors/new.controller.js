@@ -5,20 +5,21 @@
     .module('author')
     .controller('AuthorNewController', [
         '$stateParams',
-        '$scope',
+        '$state',
         'AuthorFactory',
         AuthorNewControllerFunction
     ])
 
     console.log('before new controller');
-    function AuthorNewControllerFunction($stateParams, $scope, AuthorFactory){
+    function AuthorNewControllerFunction($stateParams, $state, AuthorFactory){
       var vm = this;
       vm.author = new AuthorFactory();
       vm.create = function($scope){
-        console.log(vm.author);
         var author = vm.author;
-        author.$save(); 
-        console.log(author);
+        author.$save().then(function(){
+          console.log("author create");
+          $state.go('authorsIndex');
+        });
       }
     }
 }());

@@ -1,0 +1,47 @@
+body {
+  background: url('http://motivationalwall.com/wp-content/uploads/2016/04/get-shit-done.jpg');
+  margin: 0 auto;
+  max-width: 60em;
+  color: violet;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #1A1A1A;
+}
+
+a {
+  text-decoration: none;
+}
+
+.crud_link {
+  color: #333;
+  border: 2px solid #333;
+  padding: 3px;
+}
+
+.todos {
+  margin-left: 3em;
+}
+
+.authors {
+  text-decoration: none;
+  color: #1A1A1A;
+  border-bottom: 2px solid #1A1A1A;
+}
+
+.authors:hover {
+  color: violet;
+  border-color: violet;
+}
+
+a:hover {
+  color: blue;
+  border-color: blue;
+}
+
+.title a{
+  display: block;
+  color: #1A1A1A;
+  text-align: center;
+}
+.title a:hover{
+  color: violet;
+}

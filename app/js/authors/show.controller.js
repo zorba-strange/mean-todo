@@ -12,8 +12,9 @@
         AuthorShowControllerFunction
     ])
     function AuthorShowControllerFunction($stateParams, $state, $scope, $resource, AuthorFactory){
-      var vm = this;
-      var author;
-      $scope.author = AuthorFactory.get({id: $stateParams.id});
+      AuthorFactory.get({id: $stateParams.id}).$promise.then(function(data){
+        $scope.author = data;
+        // $scope.author.todos.push({title: 'testVAn'});
+      })
     }
 }());

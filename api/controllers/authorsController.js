@@ -16,6 +16,7 @@ var authorsController = {
       if(!err){
         console.log(err);
       }
+      res.json(author);
     });
   },
   show: function(req, res){
@@ -30,6 +31,7 @@ var authorsController = {
         if(err){
           console.log(err);
         }
+        res.json(docs);
       })
     })
   },
@@ -38,6 +40,7 @@ var authorsController = {
       if(err){
         console.log(err);
       }
+      res.json();
     })
   }
 }
