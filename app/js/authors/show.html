@@ -1,7 +1,7 @@
 <h1>{{author.name}}</h1>
 <div data-ng-repeat="todo in author.todos">
   <div>
-    <h3>{{todo.title}}</h3>
+    <h3>{{todo.importance}} * {{todo.title}}</h3>
     <p>{{todo.info}}</p>
   </div>
 </div>
