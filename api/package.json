@@ -8,8 +8,8 @@
     "start": "node index.js"
   },
   "engines": {
-    "node": "6.4.0",
-    "npm": "3.10.3"
+    "node": "6.2.2",
+    "npm": "3.9.5"
   },
   "keywords": [],
   "author": "",
