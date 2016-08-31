@@ -1,6 +1,7 @@
 <h1>Hello World</h1>
+<h3><a data-ui-sref="authorNew">Create New Author</a></h3>
 <div data-ng-repeat="author in authors">
-  <h2>{{author.name}}</h2>
-  <p>{{author.todos}}</p>
+  <div>{{author.name}}...{{author._id}}</div>
+  <h2><a data-ui-sref="authorShow({id: author._id})">{{author.name}}</a></h2>
   </div>
 </div>

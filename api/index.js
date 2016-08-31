@@ -27,4 +27,6 @@ app.listen(8080, function(err){
 
 // routes
 app.get('/authors', authorsController.index);
+app.post('/authors', authorsController.new);
+app.get('/authors/:id', authorsController.show);
 

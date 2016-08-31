@@ -9,7 +9,7 @@
     ]);
   function AuthorFactoryFunction($resource){
     console.log('authorFactory');
-    return $resource("http://localhost:8080/authors", {}, {
+    return $resource("http://localhost:8080/authors/:id", {}, {
       update: { method: "PUT" }
     });
   };
