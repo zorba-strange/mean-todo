@@ -30,5 +30,11 @@
           controller: 'AuthorShowController',
           controllerAs: 'vm'
         })
+        .state('authorEdit', {
+          url: '/authors/:id/edit',
+          templateUrl: 'js/authors/edit.html',
+          controller: 'AuthorEditController',
+          controllerAs: 'vm'
+        })
     }
 }());

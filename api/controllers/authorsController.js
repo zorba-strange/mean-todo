@@ -21,8 +21,17 @@ var authorsController = {
   show: function(req, res){
     AuthorModel.findOne({_id: req.params.id}, function(err, docs){
       res.json(docs);
-      console.log(docs);
     });
+  },
+  update: function(req, res){
+    AuthorModel.findById(req.params.id, function(err, docs){
+      docs.name = req.body.name;
+      docs.save(function(err){
+        if(err){
+          console.log(err);
+        }
+      })
+    })
   }
 }
 

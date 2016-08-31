@@ -1,4 +1,5 @@
 <h1>{{author.name}}</h1>
+<a data-ui-sref="authorEdit({id: author._id})">Edit this Author</a>
 <div data-ng-repeat="todo in author.todos">
   <div>
     <h3>{{todo.importance}} * {{todo.title}}</h3>
